@@ -1,0 +1,10 @@
+<h1>Registro</h1>
+
+{% if message %}
+<p><strong>{{ message }}</strong></p>
+{% endif %}
+<form action="/signup/" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Registrarse</button>
+</form>
